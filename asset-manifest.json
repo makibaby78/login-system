@@ -1,15 +1,26 @@
 {
   "files": {
-    "main.css": "/login-system/static/css/main.073c9b0a.css",
-    "main.js": "/login-system/static/js/main.a1695995.js",
+    "main.css": "/login-system/static/css/main.60f02596.css",
+    "main.js": "/login-system/static/js/main.f84aebfa.js",
     "static/js/787.cc3f9055.chunk.js": "/login-system/static/js/787.cc3f9055.chunk.js",
+    "static/media/Montserrat-Light.ttf": "/login-system/static/media/Montserrat-Light.3960f7cc0c46fd5d742e.ttf",
+    "static/media/Montserrat-Regular.ttf": "/login-system/static/media/Montserrat-Regular.51f8426b4f4d7778a21d.ttf",
+    "static/media/Montserrat-Bold.ttf": "/login-system/static/media/Montserrat-Bold.b1483171b6765da5b1c1.ttf",
+    "static/media/ThirstyRoughRegular.otf": "/login-system/static/media/ThirstyRoughRegular.d377602151be78238137.otf",
+    "static/media/ThirstyRoughLight.otf": "/login-system/static/media/ThirstyRoughLight.816c28449a51fba6228c.otf",
+    "static/media/MilasianCircaMediumPERSONAL.ttf": "/login-system/static/media/MilasianCircaMediumPERSONAL.65309516bfbfe12d384b.ttf",
+    "static/media/libre-baskerville.bold.ttf": "/login-system/static/media/libre-baskerville.bold.a10dc2b2065a61117b00.ttf",
+    "static/media/ThirstyScriptExtraBold.otf": "/login-system/static/media/ThirstyScriptExtraBold.92a8790640cc99ac3d8d.otf",
+    "static/media/BebasNeue-Regular.ttf": "/login-system/static/media/BebasNeue-Regular.c501e16fa3f0781f9d73.ttf",
+    "static/media/CaviarDreams.ttf": "/login-system/static/media/CaviarDreams.174b0a13f7e49c169450.ttf",
+    "static/media/TrendSansOne.ttf": "/login-system/static/media/TrendSansOne.9bcb6bb0127099cace55.ttf",
     "index.html": "/login-system/index.html",
-    "main.073c9b0a.css.map": "/login-system/static/css/main.073c9b0a.css.map",
-    "main.a1695995.js.map": "/login-system/static/js/main.a1695995.js.map",
+    "main.60f02596.css.map": "/login-system/static/css/main.60f02596.css.map",
+    "main.f84aebfa.js.map": "/login-system/static/js/main.f84aebfa.js.map",
     "787.cc3f9055.chunk.js.map": "/login-system/static/js/787.cc3f9055.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.073c9b0a.css",
-    "static/js/main.a1695995.js"
+    "static/css/main.60f02596.css",
+    "static/js/main.f84aebfa.js"
   ]
 }
