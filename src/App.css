@@ -71,6 +71,9 @@ body{
     text-align: center;
 }
 /* Helper */
+.empty-fields{
+    border: 1px solid #d93025 !important;
+}
 .link-style{
     color:#0fc4e9;
     text-decoration: none;

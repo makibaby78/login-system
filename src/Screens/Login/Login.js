@@ -6,24 +6,42 @@ import './login.css'
 function Login() {
     const [email, setEmail] = useState("")
     const [pass, setPass] = useState("")
+    const [emptyPass, setEmptyPass] = useState(false)
+    const [emptyEmail, setEmptyEmail] = useState(false)
     const [match, setMatch] = useState(false)
     const navigate = useNavigate()
-  
+
+    const validateEmail = (email) => {
+        return String(email).toLowerCase().match(
+            /^(([^<>()[\]\\.,;:\s@"]+(\.[^<>()[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+          );
+    };
     const emailChange = (e) => {
-      setEmail(e.target.value);
+        setEmail(e.target.value);
+        if(email===""){setEmptyEmail(true)}else{setEmptyEmail(false)}
     }
-  
     const passChange = (e) => {
-      setPass(e.target.value);
+        setPass(e.target.value);
+        if(pass===""){setEmptyPass(true)}else{setEmptyPass(false)}
     }
     function LoginForm(e) {
         e.preventDefault();
-        Axios.get(`https://login-system-user-management.herokuapp.com/users/email/${email}/${pass}`).then(async (response) => {
-            setMatch(await response.data.matched)
-            if(await response.data.matched===true){
-                navigate('/admin')
+        if(pass===""||email===""){
+            if(pass===""){setEmptyPass(true)}
+            if(email===""){setEmptyEmail(true)}
+        }else{
+            if(validateEmail(email)===null){setEmptyEmail(true)
+            }else{
+                Axios.get(`https://login-system-user-management.herokuapp.com/users/email/${email}/${pass}`).then(async (response) => {
+                    setMatch(await response.data.matched)
+                    if(await response.data.matched===true){
+                        navigate('/admin')
+                    }else{
+                        console.log("invalid credentials")
+                    }
+                });
             }
-        });
+        }
       }
   return (
     <div>
@@ -33,10 +51,10 @@ function Login() {
                 <form>
                     <div className='rw-inner'>
                         <div className='form-input'>
-                            <input onChange={emailChange} name="email" type="email" placeholder="Email Address" aria-label="Email Address" />
+                            <input className={emptyEmail ? 'empty-fields' : ''} onChange={emailChange} name="email" type="email" placeholder="Email Address" aria-label="Email Address" />
                         </div>
                         <div className='form-input'>
-                            <input onChange={passChange} name="password" type="password" autoComplete="off" placeholder="Password" aria-label="Password" />
+                            <input className={emptyPass ? 'empty-fields' : ''} onChange={passChange} name="password" type="password" autoComplete="off" placeholder="Password" aria-label="Password" />
                         </div>
                         <div className='form-submit'>
                             <button type="submit" onClick={(e)=>LoginForm(e)}>Login</button>
