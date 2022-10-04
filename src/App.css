@@ -55,6 +55,9 @@
     box-sizing: border-box;
     font-family: Montserrat-Regular;
 }
+.App{
+    padding: 10px;
+}
 .sw{
     width: 80%;
     max-width: 1200px;

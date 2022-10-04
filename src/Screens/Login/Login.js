@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
+import { useDispatch } from 'react-redux'
+import { loginStatRed } from '../../features/loginStatus'
 import { Link, useNavigate } from 'react-router-dom'
 import Axios from 'axios'
 import './login.css'
 
 function Login() {
+    const dispatch = useDispatch();
     const [email, setEmail] = useState("")
     const [pass, setPass] = useState("")
     const [emptyPass, setEmptyPass] = useState(false)
@@ -35,6 +38,7 @@ function Login() {
                 Axios.get(`https://login-system-user-management.herokuapp.com/users/email/${email}/${pass}`).then(async (response) => {
                     setMatch(await response.data.matched)
                     if(await response.data.matched===true){
+                        dispatch(loginStatRed(true))
                         navigate('/admin')
                     }else{
                         console.log("invalid credentials")
