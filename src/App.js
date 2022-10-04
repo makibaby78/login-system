@@ -10,7 +10,10 @@ function App() {
     <div className="App">
       <button onClick={()=>setLoggedIn(!loggedIn)}>Toggle</button>
       <Router>
-      { loggedIn ? <Screens /> : <Login />}
+          {loggedIn
+            ? <Screens />
+            : <Login />
+          }
       </Router>
     </div>
   );

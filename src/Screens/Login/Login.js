@@ -1,31 +1,29 @@
 import React, { useState } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 import Axios from 'axios'
 import './login.css'
 
 function Login() {
     const [email, setEmail] = useState("")
     const [pass, setPass] = useState("")
-    const [match, setMatch] = useState(true)
+    const [match, setMatch] = useState(false)
+    const navigate = useNavigate()
   
     const emailChange = (e) => {
       setEmail(e.target.value);
-      console.log(email)
     }
   
     const passChange = (e) => {
       setPass(e.target.value);
-      console.log(pass)
     }
     function LoginForm(e) {
         e.preventDefault();
         Axios.get(`https://login-system-user-management.herokuapp.com/users/email/${email}/${pass}`).then(async (response) => {
-          console.log(response.data)
-          setMatch(await response.data.match)
+            setMatch(await response.data.matched)
+            if(await response.data.matched===true){
+                navigate('/admin')
+            }
         });
-        if(match){
-          console.log("success")
-        }
       }
   return (
     <div>
@@ -41,7 +39,7 @@ function Login() {
                             <input onChange={passChange} name="password" type="password" autoComplete="off" placeholder="Password" aria-label="Password" />
                         </div>
                         <div className='form-submit'>
-                            <button type="submit">Login</button>
+                            <button type="submit" onClick={(e)=>LoginForm(e)}>Login</button>
                         </div>
                         <p className='t-center'>Don't have an account? <Link to="/register" className='link-style'>Register here</Link></p>
                     </div>
