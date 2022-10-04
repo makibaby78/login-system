@@ -1,26 +1,14 @@
-import React, { useState, useEffect } from 'react';
-import Axios from 'axios';
+import React, { useState } from 'react';
+import Admin from './Screens/Admin/Admin';
 import './App.css';
+import Login from './Screens/Login/Login';
 
 function App() {
-  const [userName, setUserName] = useState([])
-
-  useEffect(()=>{
-    Axios.get('https://login-system-user-management.herokuapp.com/users').then((response)=>{
-        setUserName(response.data);
-    })
-}, [])
-
+  const [loggedIn, setLoggedIn] = useState(false)
   return (
     <div className="App">
-      <h1>test</h1>
-      {userName.map((val, index)=>{
-            return(
-                <div className='monggo-val-wrapper' key={index}>
-                    <h4>{val.name} test</h4>
-                </div>
-            )
-        })}
+      <button onClick={()=>setLoggedIn(!loggedIn)}>Toggle</button>
+      { loggedIn ? <Admin /> : <Login />}
     </div>
   );
 }
