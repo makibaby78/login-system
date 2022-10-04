@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import './App.css';
-import Login from './Screens/Login/Login';
 import { BrowserRouter as Router } from 'react-router-dom';
 import Screens from './Screens/Screens';
+import Authenticate from './Authenticate/Authenticate';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false)
@@ -12,7 +12,7 @@ function App() {
       <Router>
           {loggedIn
             ? <Screens />
-            : <Login />
+            : <Authenticate />
           }
       </Router>
     </div>
