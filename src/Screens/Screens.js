@@ -1,8 +1,9 @@
 import React from 'react'
+import Admin from './Admin/Admin'
 
 function Screens() {
   return (
-    <div>Screens</div>
+    <div><Admin/></div>
   )
 }
 

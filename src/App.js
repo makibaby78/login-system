@@ -1,14 +1,14 @@
 import React, { useState } from 'react';
-import Admin from './Screens/Admin/Admin';
 import './App.css';
 import Login from './Screens/Login/Login';
+import Screens from './Screens/Screens';
 
 function App() {
   const [loggedIn, setLoggedIn] = useState(false)
   return (
     <div className="App">
       <button onClick={()=>setLoggedIn(!loggedIn)}>Toggle</button>
-      { loggedIn ? <Admin /> : <Login />}
+      { loggedIn ? <Screens /> : <Login />}
     </div>
   );
 }
