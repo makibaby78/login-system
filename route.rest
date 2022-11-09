@@ -1,0 +1,51 @@
+PATCH http://localhost:8000/users/633d2ca07e28b4919261d3e9
+Content-Type: application/json
+
+{
+    "name": "teasdasdes",
+    "token": "aasdasdit"
+}
+
+
+###
+
+
+DELETE http://localhost:8000/users/633d2c1bfa80f56bd8b6a52b
+
+
+###
+
+
+GET http://localhost:8000/subscribers
+
+
+###
+
+
+GET http://localhost:3000/subscribers/633414025734f83d74013ab9
+
+###
+
+
+POST http://localhost:8000/users/
+Content-Type: application/json
+
+{
+    "name": "testpass",
+    "pass": "123456789",
+    "email": "test@gmail.com"
+}
+
+
+###
+
+DELETE http://localhost:3000/subscribers/63341053bf1acec5f9b190b2
+
+###
+
+PATCH http://localhost:3000/subscribers/633414025734f83d74013ab9
+Content-Type: application/json
+
+{
+    "name": "Name Cunt"
+}

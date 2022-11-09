@@ -11,8 +11,9 @@ function Login() {
     const [pass, setPass] = useState("")
     const [emptyPass, setEmptyPass] = useState(false)
     const [emptyEmail, setEmptyEmail] = useState(false)
-    const [match, setMatch] = useState(false)
     const navigate = useNavigate()
+
+    const apiLink = 'https://login-system-backend.onrender.com';
 
     const validateEmail = (email) => {
         return String(email).toLowerCase().match(
@@ -27,7 +28,7 @@ function Login() {
         setPass(e.target.value);
         if(pass===""){setEmptyPass(true)}else{setEmptyPass(false)}
     }
-    function LoginForm(e) {
+    function Login(e) {
         e.preventDefault();
         if(pass===""||email===""){
             if(pass===""){setEmptyPass(true)}
@@ -35,9 +36,9 @@ function Login() {
         }else{
             if(validateEmail(email)===null){setEmptyEmail(true)
             }else{
-                Axios.get(`https://login-system-user-management.herokuapp.com/users/email/${email}/${pass}`).then(async (response) => {
-                    setMatch(await response.data.matched)
-                    if(await response.data.matched===true){
+                Axios.get(`${apiLink}/users/email/${email}/${pass}`).then((response) => {
+                    if(response.data.matched===true){
+                        localStorage.setItem('userID', response.data._id)
                         dispatch(loginStatRed(true))
                         navigate('/admin')
                     }else{
@@ -61,7 +62,7 @@ function Login() {
                             <input className={emptyPass ? 'empty-fields' : ''} onChange={passChange} name="password" type="password" autoComplete="off" placeholder="Password" aria-label="Password" />
                         </div>
                         <div className='form-submit'>
-                            <button type="submit" onClick={(e)=>LoginForm(e)}>Login</button>
+                            <button type="submit" onClick={(e)=>Login(e)}>Login</button>
                         </div>
                         <p className='t-center'>Don't have an account? <Link to="/register" className='link-style'>Register here</Link></p>
                     </div>
