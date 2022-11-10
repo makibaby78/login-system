@@ -83,6 +83,7 @@ body{
 }
 .link-style:hover{
     color: #00d4ff;
+    text-decoration: none !important;
     transition-duration: 0.3s;
     text-decoration: underline;
 }

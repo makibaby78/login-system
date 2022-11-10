@@ -80,9 +80,9 @@ function Register() {
                             <input className={emptyPass ? 'empty-fields' : ''} onChange={passChange} name="password" type="password" autoComplete="off" placeholder="Password" aria-label="Password" />
                         </div>
                         <div className='form-submit'>
-                            <button type="submit" onClick={(e)=>Register(e)}>Login</button>
+                            <button type="submit" onClick={(e)=>Register(e)}>Register</button>
                         </div>
-                        <p className='t-center'>Already have an account? <Link to="/Login" className='link-style'>Login here</Link></p>
+                        <p className='t-center'>Already have an account? <Link to="/login" className='link-style'>Login</Link></p>
                     </div>
                 </form>
             </div>

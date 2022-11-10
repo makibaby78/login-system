@@ -1,0 +1,56 @@
+.useroption-wrapper {
+    position: absolute;
+    background-color: #fff;
+    right: 10px;
+    top: 56px;
+    width: 100%;
+    max-width: 300px;
+    border-radius: 7px;
+    padding: 10px;
+    box-shadow: 0px 2px 2px 0px rgb(0 0 0 / 20%);
+    -webkit-box-shadow: 0px 2px 2px 0px rgb(0 0 0 / 20%);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.20);
+    border:1px solid #E4E6EB;
+}
+.icon-m{
+    font-family: Montserrat-Bold;
+    color: #fff;
+    background-color: #00d4ff;
+    font-size: 20px;
+}
+.ouo-p-n{
+    padding: 10px;
+    width: 100%;
+    border-radius: 7px;
+    box-shadow: 0px 2px 2px 0px rgb(0 0 0 / 20%);
+    -webkit-box-shadow: 0px 2px 2px 0px rgb(0 0 0 / 20%);
+    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.20);
+    margin-bottom: 10px;
+}
+.uo-p-n {
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+    padding-bottom: 10px;
+}
+.divider{
+    border-bottom: 1px solid #53535378;
+}
+.logout-w{
+    display: flex;
+    align-items: center;
+    column-gap: 6px;
+}
+.uo-hov-eff{
+    background-color: #f2f2f2;
+}
+.logout-w svg {
+    background-color: #e4e6eb;
+    border-radius: 50%;
+    padding: 6px;
+    font-size: 30px;
+    color: #050505;
+}
+.logout-w span{
+    cursor: pointer;
+}
