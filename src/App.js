@@ -1,3 +1,4 @@
+
 import React, { useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux'
 import './App.css';
@@ -9,16 +10,17 @@ import { loginStatRed } from './features/loginStatus'
 
 function App() {
   const loginStatus = useSelector((state)=>state.loginStatusReducers.value)
-  const apiLink = 'https://login-system-backend.onrender.com'
   const dispatch = useDispatch();
   const userID = localStorage.getItem('userID')
 
   useEffect(()=>{
-      Axios.get(`${apiLink}/users/${userID}`).then((response)=>{
+    if(userID===!null||userID===''){
+      Axios.get(`https://login-system-backend.onrender.com/users/${userID}`).then((response)=>{
         if(response.data.name!==null||response.data.name!==''){
           dispatch(loginStatRed(true))
         }
       })
+    }
   })
 
   return (

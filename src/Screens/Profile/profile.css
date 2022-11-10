@@ -1,0 +1,129 @@
+img.cover-photo {
+    width: 100%;
+    object-fit: cover;
+}
+.prof-content-wrapper {
+    margin-left: 60px;
+}
+.pw-cover-sec {
+    overflow: hidden;
+    width: 100%;
+    border-radius: 8px;
+}
+
+.pw-cc-holder {
+    position: relative;
+    width: 100%;
+    margin-top: -20%;
+    margin-bottom: -20%;
+    overflow: hidden;
+}
+img.cover-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.btn-ecp {
+    cursor: pointer;
+    position: absolute;
+    background-color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    color: #000;
+    display: flex;
+    column-gap: 8px;
+    bottom: 29%;
+    right: 15px;
+}
+.pw-details-sec {
+    margin-top: -50px;
+    z-index: 1;
+    position: relative;
+    padding: 18px;
+    border: 1px solid #0000001c;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+}
+.pds-left {
+    display: flex;
+    align-items: center;
+    column-gap: 10px;
+}
+.content-sec{
+    height: 100vh;
+}
+.btn-ecp:hover{
+    background-color: #f0f2f5;
+}
+.pcw-first-sec {
+    background-color: #fff;
+}
+.pl-photo-wrapper {
+    position: relative;
+    width: fit-content;
+}
+.pl-photo-wrapper svg {
+    position: absolute;
+    right: 18px;
+    bottom: 18px;
+}
+.pl-photo-wrapper img {
+    position: relative;
+    max-width: 170px;
+    border-radius: 50%;
+    border: 5px solid #fff;
+}
+.pl-name h2{
+    color: #000;
+}
+.pds-right button:nth-child(1) {
+    background-color: #00d4ff;
+    color: #fff;
+    transition-duration: 0.2s;
+}
+.pds-right button:nth-child(1):hover {
+    background-color: #0cbadd;
+    transition-duration: 0.2s;
+}
+.pds-right button:nth-child(2) {
+    background-color: #e4e6eb;
+    transition-duration: 0.2s;
+}
+.pds-right button:nth-child(2):hover {
+    background-color: #d8dadf;
+    transition-duration: 0.2s;
+}
+
+.pds-right button {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    column-gap: 8px;
+    padding: 10px;
+    border: none;
+    border-radius: 6px;
+}
+.pds-right {
+    display: flex;
+    column-gap: 10px;
+}
+@media screen and (max-width: 992px) {
+    .pds-left, .pw-details-sec {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        row-gap: 10px;
+    }
+    .pw-details-sec{
+        margin-top: -80px;
+    }
+}
+@media screen and (max-width: 768px) {
+    .btn-ecp span{
+        display: none;
+    }
+    .pw-details-sec{
+        margin-top: -100px;
+    }
+}

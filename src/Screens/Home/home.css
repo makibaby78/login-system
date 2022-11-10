@@ -1,0 +1,6 @@
+.home-content-wrapper {
+    display: flex;
+    width: 100%;
+    column-gap: 10px;
+    justify-content: space-between;
+}

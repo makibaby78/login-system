@@ -4,6 +4,7 @@ import { Provider } from 'react-redux';
 import { configureStore } from '@reduxjs/toolkit';
 import loginStatusReducers from './features/loginStatus'
 import userRegReducers from './features/userReg'
+import leftbarStatusReducers from './features/leftbarStatus'
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
@@ -12,6 +13,7 @@ const store = configureStore({
   reducer:{
     loginStatusReducers,
     userRegReducers,
+    leftbarStatusReducers,
   },
 })
 

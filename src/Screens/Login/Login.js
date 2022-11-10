@@ -29,7 +29,7 @@ function Login() {
         if(pass===""){setEmptyPass(true)}else{setEmptyPass(false)}
     }
     function Login(e) {
-        e.preventDefault();
+        e.preventDefault()
         if(pass===""||email===""){
             if(pass===""){setEmptyPass(true)}
             if(email===""){setEmptyEmail(true)}
@@ -40,9 +40,10 @@ function Login() {
                     if(response.data.matched===true){
                         localStorage.setItem('userID', response.data._id)
                         dispatch(loginStatRed(true))
-                        navigate('/admin')
+                        navigate('/home')
+                        return console.log("Welcome");
                     }else{
-                        console.log("invalid credentials")
+                        return console.log("invalid credentials");
                     }
                 });
             }

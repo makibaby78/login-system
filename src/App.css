@@ -55,8 +55,8 @@
     box-sizing: border-box;
     font-family: Montserrat-Regular;
 }
-.App{
-    padding: 10px;
+.fb{
+    font-family: Montserrat-Bold !important;
 }
 .sw{
     width: 80%;
@@ -68,7 +68,7 @@
 }
 body{
     color: #535353;
-    background-color: #dddddd;
+    background-color: #f0f2f5;
 }
 .t-center{
     text-align: center;
@@ -83,15 +83,29 @@ body{
 }
 .link-style:hover{
     color: #00d4ff;
-    text-decoration: none !important;
     transition-duration: 0.3s;
-    text-decoration: underline;
+}
+.fc-1{
+    color: #000;
+}
+.link-style-2{
+    color: #000;
+    text-decoration: none;
+}
+.pt-10 {
+    padding-top: 10px;
+}
+.mt-60 {
+    margin-top: 60px;
+}
+.mb-5{
+    margin-bottom: 5px;
 }
 .sp{
     padding: 10px;
 }
 h2 {
-    font-size: 35px;
+    font-size: 30px;
 }
 .form-wrapper-outer {
     min-height: calc(100vh - 100px);

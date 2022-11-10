@@ -1,0 +1,17 @@
+.hcr-cw{
+    margin-right: 10px;
+}
+.hcr-title {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+.hcr-icons {
+    display: flex;
+    align-items: center;
+    column-gap: 30px;
+}
+.hcr-icons svg{
+    color: #65676bb8;
+}

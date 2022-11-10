@@ -1,17 +1,3 @@
-.useroption-wrapper {
-    position: absolute;
-    background-color: #fff;
-    right: 10px;
-    top: 56px;
-    width: 100%;
-    max-width: 300px;
-    border-radius: 7px;
-    padding: 10px;
-    box-shadow: 0px 2px 2px 0px rgb(0 0 0 / 20%);
-    -webkit-box-shadow: 0px 2px 2px 0px rgb(0 0 0 / 20%);
-    -moz-box-shadow: 0px 2px 2px 0px rgba(0,0,0,0.20);
-    border:1px solid #E4E6EB;
-}
 .icon-m{
     font-family: Montserrat-Bold;
     color: #fff;
@@ -41,8 +27,14 @@
     align-items: center;
     column-gap: 6px;
 }
-.uo-hov-eff{
-    background-color: #f2f2f2;
+.uo-hov-eff {
+    background-color: transparent;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+.uo-hov-eff:hover {
+    background-color: #e7e7e7;
 }
 .logout-w svg {
     background-color: #e4e6eb;

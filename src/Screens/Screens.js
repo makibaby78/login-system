@@ -1,5 +1,5 @@
 import React from 'react'
-import Admin from './Admin/Admin'
+import Home from './Home/Home'
 import { Route, Routes } from 'react-router-dom';
 import Profile from './Profile/Profile';
 
@@ -8,9 +8,10 @@ function Screens() {
   return (
     <div>
         <Routes>
-            <Route path="/" element={<Profile />} />
-            <Route path="*" element={<Profile />} />
-            <Route path="/admin" element={<Admin />} />
+            <Route path="/" element={<Home />} />
+            <Route path="*" element={<Home />} />
+            <Route path="/home" element={<Home />} />
+            <Route path="/profile" element={<Profile />} />
         </Routes>
     </div>
   )
